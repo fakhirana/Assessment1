@@ -62,6 +62,15 @@
                 return; // Menghentikan eksekusi jika textfield kosong
               }
 
+              // Jika jumlah tidak kosong, lakukan pencarian dalam array buku berdasarkan pilihan karakter
+              const selectedBook = buku.find(book => book.nama === option);
+
+              // Jika pilihan karakter tidak ditemukan
+              if (!selectedBook) {
+                alert("Buku tidak ditemukan!");
+                return; // Menghentikan eksekusi jika buku tidak ditemukan
+              }
+
               // Menampilkan nilai yang telah diambil untuk keperluan debugging
               console.log("Jumlah: ", jumlah);
               console.log("Option: ", option);
