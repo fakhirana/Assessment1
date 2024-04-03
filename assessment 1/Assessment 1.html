@@ -38,7 +38,7 @@
 
         <!-- Tombol -->
         <div class="mt-4">
-          <button class="bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">Submit</button>
+          <button id="submitBtn" class="bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">Submit</button>
         </div>
 
         <script>
@@ -50,12 +50,18 @@
 
           document.addEventListener("DOMContentLoaded", function() {
             // Menambahkan event listener untuk tombol submit
-            document.querySelector("button").addEventListener("click", function() {
+            document.getElementById("submitBtn").addEventListener("click", function() {
               // Mengambil nilai dari textfield jumlah
               const jumlah = document.getElementById("jumlah").value;
               // Mengambil nilai dari select option yang dipilih
               const option = document.getElementById("option").value;
-          
+              
+              // Pengecekan apakah textfield jumlah kosong
+              if (jumlah === "") {
+                alert("Jumlah tidak boleh kosong!");
+                return; // Menghentikan eksekusi jika textfield kosong
+              }
+
               // Menampilkan nilai yang telah diambil untuk keperluan debugging
               console.log("Jumlah: ", jumlah);
               console.log("Option: ", option);
