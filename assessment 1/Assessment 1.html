@@ -42,19 +42,25 @@
         </div>
 
         <script>
+          let buku = [
+            {"nama": "sherlock", "jumlah":2},
+            {"nama": "lupin", "jumlah":2},
+            {"nama": "aladin", "jumlah":2},
+          ];
+
           document.addEventListener("DOMContentLoaded", function() {
-          // Menambahkan event listener untuk tombol submit
-          document.querySelector("button").addEventListener("click", function() {
-            // Mengambil nilai dari textfield jumlah
-            const jumlah = document.getElementById("jumlah").value;
-            // Mengambil nilai dari select option yang dipilih
-            const option = document.getElementById("option").value;
-        
-            // Menampilkan nilai yang telah diambil untuk keperluan debugging
-            console.log("Jumlah: ", jumlah);
-            console.log("Option: ", option);
+            // Menambahkan event listener untuk tombol submit
+            document.querySelector("button").addEventListener("click", function() {
+              // Mengambil nilai dari textfield jumlah
+              const jumlah = document.getElementById("jumlah").value;
+              // Mengambil nilai dari select option yang dipilih
+              const option = document.getElementById("option").value;
+          
+              // Menampilkan nilai yang telah diambil untuk keperluan debugging
+              console.log("Jumlah: ", jumlah);
+              console.log("Option: ", option);
+            });
           });
-        });
         </script>
 
       </div>
