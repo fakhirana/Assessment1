@@ -71,6 +71,12 @@
                 return; // Menghentikan eksekusi jika buku tidak ditemukan
               }
 
+              // Jika jumlah yang diinputkan lebih besar dari jumlah buku yang tersedia
+              if (parseInt(jumlah) > selectedBook.jumlah) {
+                alert("Jumlah buku tidak tersedia!");
+                return; // Menghentikan eksekusi jika jumlah buku tidak tersedia
+              }
+
               // Menampilkan nilai yang telah diambil untuk keperluan debugging
               console.log("Jumlah: ", jumlah);
               console.log("Option: ", option);
